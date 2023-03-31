@@ -1,0 +1,28 @@
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+# Mono-specific ignores
+.mono/
+data_*/
+
+*.obj
+*.dblite
+moduleSource/*.obj
+moduleSource/.vs
+moduleSource/.vscode
+moduleSource/win64/*
+moduleSource/x11/*
+moduleSource/x64
+moduleSource/src/.vs
+moduleSource/src/.vscode/*
+moduleSource/libs/ffmpeg/linux/bin
+moduleSource/libs/godot-cpp/test
+project.godot
+icon.png
+testScene.tscn
+default_env.tres
+*.obj.import
+*.ilk
