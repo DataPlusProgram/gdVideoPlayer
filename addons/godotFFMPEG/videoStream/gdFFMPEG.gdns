@@ -1,0 +1,13 @@
+[gd_resource type="NativeScript" load_steps=2 format=2]
+
+[sub_resource type="GDNativeLibrary" id=1]
+load_once = false
+entry/Windows.64 = "res://addons/godotFFMPEG/bin/win64/ffmpeg/gdFFMPEG.dll"
+entry/X11.64 = "res://addons/godotFFMPEG/bin/linux64/libgdFFMPEG.so"
+dependency/Windows.64 = [ "res://addons/godotFFMPEG/bin/win64/ffmpeg/avcodec-60.dll", "res://addons/godotFFMPEG/bin/win64/ffmpeg/avdevice-60.dll", "res://addons/godotFFMPEG/bin/win64/ffmpeg/avfilter-9.dll", "res://addons/godotFFMPEG/bin/win64/ffmpeg/avformat-60.dll", "res://addons/godotFFMPEG/bin/win64/ffmpeg/avutil-58.dll", "res://addons/godotFFMPEG/bin/win64/ffmpeg/swresample-4.dll", "res://addons/godotFFMPEG/bin/win64/ffmpeg/swscale-7.dll" ]
+dependency/X11.64 = [ "res://addons/godotFFMPEG/bin/linux64/libavcodec.so", "res://addons/godotFFMPEG/bin/linux64/libavdevice.so", "res://addons/godotFFMPEG/bin/linux64/libavfilter.so", "res://addons/godotFFMPEG/bin/linux64/libavformat.so", "res://addons/godotFFMPEG/bin/linux64/libavutil.so", "res://addons/godotFFMPEG/bin/linux64/libswresample.so", "res://addons/godotFFMPEG/bin/linux64/libswscale.so" ]
+
+[resource]
+resource_name = "vid"
+class_name = "videoClass"
+library = SubResource( 1 )
