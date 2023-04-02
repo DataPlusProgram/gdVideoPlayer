@@ -26,3 +26,5 @@ testScene.tscn
 default_env.tres
 *.obj.import
 *.ilk
+*.pdb
+*.exp

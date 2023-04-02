@@ -202,7 +202,8 @@ func _on_Video_gui_input(event):
 		
 		
 	
-
+func mute():
+	video.mute()
 
 func _on_ButtonAudio_gui_input(event):
 	if "InputEventMouseMotion":
@@ -323,3 +324,6 @@ func windowResize():
 	if fullscreened:
 		setFullsize()
 	
+
+func closeVideo():
+	video.close()

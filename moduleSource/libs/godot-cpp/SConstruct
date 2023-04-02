@@ -277,7 +277,7 @@ elif env["platform"] == "windows":
         if env["target"] == "debug":
             env.Append(CCFLAGS=["/Z7", "/Od", "/EHsc", "/D_DEBUG", "/MDd"])
         elif env["target"] == "release":
-            env.Append(CCFLAGS=["/O2", "/EHsc", "/DNDEBUG", "/MD"])
+            env.Append(CCFLAGS=["/O2", "/EHsc", "/DNDEBUG", "/MT"])
 
     elif host_platform == "linux" or host_platform == "freebsd" or host_platform == "osx":
         # Cross-compilation using MinGW
