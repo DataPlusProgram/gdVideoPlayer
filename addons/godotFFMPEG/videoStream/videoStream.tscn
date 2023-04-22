@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://addons/godotFFMPEG/videoStream/Node2D.gd" type="Script" id=1]
 [ext_resource path="res://addons/godotFFMPEG/videoStream/gdFFMPEG.gdns" type="Script" id=2]
 [ext_resource path="res://addons/godotFFMPEG/videoStream/videoStream.gd" type="Script" id=3]
 
@@ -28,18 +27,6 @@ looped = true
 script = ExtResource( 2 )
 
 [node name="audio" type="AudioStreamPlayer" parent="."]
-
-[node name="visualizer" type="Control" parent="audio"]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -109.0
-margin_top = 4.0
-margin_right = -109.0
-margin_bottom = 4.0
-script = ExtResource( 1 )
 
 [node name="debug" type="TextEdit" parent="."]
 visible = false

@@ -2,6 +2,8 @@ extends TextureRect
 signal finished
 
 export(String,FILE) var videoPath = "res://videos/big_buck_bunny.mp4"
+export var spatialAudio = false
+export var spatialAttenuation = 1
 var image
 var startTime = -1
 var latestTime = 0
@@ -37,7 +39,7 @@ var swapBuffer = []
 var receivedFirstImageFrame = false
 
 
-onready var audio : AudioStreamPlayer = $audio
+onready var audio : Node = $audio
 export var autoPlay = true
 var frameBufferSize = 300
 export var audioBufferLength : float = 0.5
@@ -58,7 +60,8 @@ var seeked = false
 
 func _ready():
 	
-
+	if spatialAudio:
+		makeAudioSpatial()
 	
 	$debug.visible = showDebug
 	if proccesThread:
@@ -76,7 +79,28 @@ func _ready():
 	
 	
 
-
+func makeAudioSpatial():
+	yield(get_tree().root, "ready")
+	audio.queue_free()
+	var aud3D = AudioStreamPlayer3D.new()
+	var newPar = Spatial.new()
+	
+	aud3D.unit_size = spatialAttenuation
+	newPar.set_script(load("res://addons/godotFFMPEG/videoStream/Spatial.gd"))
+	
+	
+	get_parent().add_child(newPar)
+	get_parent().remove_child(self)
+	
+	aud3D.stream = audio.stream
+	
+	audio.queue_free()
+	newPar.add_child(aud3D)
+	audio = aud3D
+	newPar.add_child(self)
+	newPar.name = name
+	reloadAudioStream()
+	
 func loadVideo(path):
 	close()
 	swapBuffer.clear()
@@ -491,3 +515,7 @@ func previousFrame():
 func setVolume(db):
 	$audio.volume_db = db
 	pass
+
+
+func getTexture():
+	return texture
