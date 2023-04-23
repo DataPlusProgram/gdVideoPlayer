@@ -11,6 +11,8 @@ Currently it only works for Windows, I have supplied the compiled binaries for L
 ## Usage
 
 Consult the provided YouTube video on how to use.
+
+https://www.youtube.com/watch?v=foc-7mjaYPI
   
   
 ### Basic video stream 
