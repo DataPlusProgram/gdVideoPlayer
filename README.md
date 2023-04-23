@@ -13,13 +13,13 @@ Currently it only works for Windows, I have supplied the compiled binaries for L
 Consult the provided YouTube video on how to use.
   
   
-** Basic video stream 
+** Basic video stream **
 Drag the videoStream.tscn scene into your scene tree and set the vdieo path property 
 
 
 There is a provided video with the addon for demonstration purposes
 
-** Video player
+** Video player **
 
 ![](https://i.imgur.com/NReRdXS.png)
   
