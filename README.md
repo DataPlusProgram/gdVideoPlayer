@@ -2,18 +2,24 @@
 
 This is a Godot FFMPEG implementation via GDNative.    
   
-The implementation writes directly to a TexutreRect so is not super optimal.  
+You can play any video file supported by FFMPEG which is most files, unlike Godot which only supports Ogg natively.
   
-**Currently this project has only been tested for Windows** and only the Windows binaries are provided here.  
-The binaries for other platforms will have to be manually compiled by the user.
-  
-This should work for any format the FFMPEG supports but I've not extensively tested it there are probably many incompatibilities not yet found.  
-  
-The most common error is bad audio playback under certain conditions.  
-  
-![](https://i.imgur.com/TRur6KL.png)
-  
-## Usage
-Refer to the provided example project for usage(provided for Windows only)  
+Currently it only works for Windows, I have supplied the compiled binaries for Linux too but can't get it to work correctly if anyone wants to check for a fix they can.
 
-![](https://i.imgur.com/k4yM430.png)
+
+
+## Usage
+
+Consult the provided YouTube video on how to use.
+  
+  
+* Basic video stream 
+Drag the videoStream.tscn scene into your scene tree and set the vdieo path property 
+
+
+There is a provided video with the addon for demonstration purposes
+
+* Video player
+
+![](https://imgur.com/NReRdXS)
+  
